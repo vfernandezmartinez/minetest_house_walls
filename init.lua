@@ -1,5 +1,15 @@
 local S = default.get_translator
 
+minetest.register_node("house_walls:wooden_floor", {
+        description = S("Wooden Floor"),
+        paramtype2 = "facedir",
+        place_param2 = 0,
+        tiles = {"default_wood.png","default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png"},
+        is_ground_content = false,
+        groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+        sounds = default.node_sound_wood_defaults(),
+})
+
 minetest.register_node("house_walls:pine_floor", {
         description = S("Pine Floor"),
         paramtype2 = "facedir",
