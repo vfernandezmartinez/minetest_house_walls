@@ -142,6 +142,15 @@ minetest.register_node("house_walls:roof_light_brick_wall", {
         sounds = default.node_sound_stone_defaults(),
 })
 
+minetest.register_node("house_walls:light_brick_white_tile_wall", {
+        description = S("Light Brick Wall + White Tile"),
+        paramtype2 = "facedir",
+        tiles = {"default_cloud.png","default_cloud.png","default_cloud.png","light_brick.png","white_tile.png","light_brick.png"},
+        is_ground_content = false,
+        groups = {cracky = 2},
+        sounds = default.node_sound_stone_defaults(),
+})
+
 
 
 minetest.register_node("house_walls:dark_brick_wall", {

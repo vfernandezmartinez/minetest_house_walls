@@ -13,5 +13,6 @@ Roof Brick Wall=
 Light Brick Wall=
 Outside Light Brick Wall=
 Roof Light Brick Wall=
+Light Brick Wall + White Tile=
 Dark Brick Wall=
 Dark Roof Brick Wall=
