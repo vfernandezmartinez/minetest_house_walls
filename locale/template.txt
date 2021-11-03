@@ -1,0 +1,17 @@
+# textdomain: house_walls
+Grey Tile Floor=
+Wooden Floor=
+Acacia Wooden Floor=
+Aspen Wooden Floor=
+Junglewood Floor=
+Pine Floor=
+Inner Wall=
+White Tile Inner Wall=
+Brick Wall=
+Orange Brick=
+Roof Brick Wall=
+Light Brick Wall=
+Outside Light Brick Wall=
+Roof Light Brick Wall=
+Dark Brick Wall=
+Dark Roof Brick Wall=
