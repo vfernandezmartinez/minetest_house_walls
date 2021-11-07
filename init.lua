@@ -18,7 +18,7 @@ minetest.register_node("house_walls:wooden_floor", {
         place_param2 = 0,
         tiles = {"default_wood.png","default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png"},
         is_ground_content = false,
-        groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+        groups = {cracky = 2, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
         sounds = default.node_sound_wood_defaults(),
 })
 
@@ -28,7 +28,7 @@ minetest.register_node("house_walls:acacia_wooden_floor", {
         place_param2 = 0,
         tiles = {"default_acacia_wood.png","default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png"},
         is_ground_content = false,
-        groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+        groups = {cracky = 2, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
         sounds = default.node_sound_wood_defaults(),
 })
 
@@ -38,7 +38,7 @@ minetest.register_node("house_walls:aspen_wooden_floor", {
         place_param2 = 0,
         tiles = {"default_aspen_wood.png","default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png"},
         is_ground_content = false,
-        groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+        groups = {cracky = 2, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
         sounds = default.node_sound_wood_defaults(),
 })
 
@@ -48,7 +48,7 @@ minetest.register_node("house_walls:junglewood_wooden_floor", {
         place_param2 = 0,
         tiles = {"default_junglewood.png","default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png"},
         is_ground_content = false,
-        groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+        groups = {cracky = 2, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
         sounds = default.node_sound_wood_defaults(),
 })
 
@@ -58,7 +58,7 @@ minetest.register_node("house_walls:pine_floor", {
         place_param2 = 0,
         tiles = {"default_pine_wood.png","default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png"},
         is_ground_content = false,
-        groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
+        groups = {cracky = 2, oddly_breakable_by_hand = 2, flammable = 3, wood = 1},
         sounds = default.node_sound_wood_defaults(),
 })
 
@@ -166,6 +166,56 @@ minetest.register_node("house_walls:dark_roof_brick_wall", {
         description = S("Dark Roof Brick Wall"),
         paramtype2 = "facedir",
         tiles = {"default_brick.png","default_cloud.png","default_brick.png","default_brick.png","default_brick.png","default_brick.png"},
+        is_ground_content = false,
+        groups = {cracky = 2},
+        sounds = default.node_sound_stone_defaults(),
+})
+
+
+
+minetest.register_node("house_walls:yellow_wall", {
+        description = S("Yellow Wall"),
+        paramtype2 = "facedir",
+        tiles = {"default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png^[multiply:#ecca7c","default_cloud.png","default_cloud.png^[multiply:#ecca7c"},
+        is_ground_content = false,
+        groups = {cracky = 2},
+        sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("house_walls:grey_wall", {
+        description = S("Grey Wall"),
+        paramtype2 = "facedir",
+        tiles = {"default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png^[multiply:#a8a9ad","default_cloud.png","default_cloud.png^[multiply:#a8a9ad"},
+        is_ground_content = false,
+        groups = {cracky = 2},
+        sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("house_walls:blue_wall", {
+        description = S("Blue Wall"),
+        paramtype2 = "facedir",
+        tiles = {"default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png^[multiply:#43b6f6","default_cloud.png","default_cloud.png^[multiply:#43b6f6"},
+        is_ground_content = false,
+        groups = {cracky = 2},
+        sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("house_walls:red_wall", {
+        description = S("Red Wall"),
+        paramtype2 = "facedir",
+        tiles = {"default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png^[multiply:#ca3a28","default_cloud.png","default_cloud.png^[multiply:#ca3a28"},
+        is_ground_content = false,
+        groups = {cracky = 2},
+        sounds = default.node_sound_stone_defaults(),
+})
+
+
+-- Sidewalks
+minetest.register_node("house_walls:grey_sidewalk", {
+        description = S("Grey Sidewalk"),
+        paramtype2 = "facedir",
+        place_param2 = 0,
+        tiles = {"grey_sidewalk.png"},
         is_ground_content = false,
         groups = {cracky = 2},
         sounds = default.node_sound_stone_defaults(),
