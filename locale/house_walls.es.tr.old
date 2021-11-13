@@ -1,5 +1,7 @@
 # textdomain: house_walls
 Grey Tile Floor=Suelo de azulejos grises
+Granite Floor=Suelo de granito
+Marble Floor=Suelo de mármol
 Wooden Floor=Suelo de madera de manzano
 Acacia Wooden Floor=Suelo de madera de acacia
 Aspen Wooden Floor=Suelo de madera de álamo
@@ -17,4 +19,7 @@ Light Brick Wall + White Tile=Pared de ladrillos claros + azulejos blancos
 Dark Brick Wall=Pared de ladrillos oscuros
 Dark Roof Brick Wall=Pared de ladrillos oscuros para el tejado
 Yellow Wall=Pared amarilla
+Grey Wall=Pared gris
+Blue Wall=Pared azul
+Red Wall=Pared roja
 Grey Sidewalk=Acera gris
