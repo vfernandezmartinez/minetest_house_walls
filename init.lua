@@ -12,6 +12,14 @@ minetest.register_node("house_walls:gray_tile_floor", {
         sounds = default.node_sound_stone_defaults(),
 })
 
+minetest.register_node("house_walls:terracotta_floor", {
+        description = S("Terracotta Floor"),
+        tiles = {"terracotta_tile.png","default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png"},
+        is_ground_content = false,
+        groups = {cracky = 2},
+        sounds = default.node_sound_stone_defaults(),
+})
+
 minetest.register_node("house_walls:granite_floor", {
         description = S("Granite Floor"),
         paramtype2 = "facedir",
@@ -26,7 +34,7 @@ minetest.register_node("house_walls:marble_floor", {
         description = S("Marble Floor"),
         paramtype2 = "facedir",
         place_param2 = 0,
-        tiles = {"building_blocks_marble.png","default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png"},
+        tiles = {"marble.png","default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png"},
         is_ground_content = false,
         groups = {cracky = 2},
         sounds = default.node_sound_stone_defaults(),
@@ -202,10 +210,28 @@ minetest.register_node("house_walls:yellow_wall", {
         sounds = default.node_sound_stone_defaults(),
 })
 
+minetest.register_node("house_walls:yellow_block", {
+        description = S("Yellow Block"),
+        paramtype2 = "facedir",
+        tiles = {"default_cloud.png^[multiply:#ecca7c"},
+        is_ground_content = false,
+        groups = {cracky = 2},
+        sounds = default.node_sound_stone_defaults(),
+})
+
 minetest.register_node("house_walls:grey_wall", {
         description = S("Grey Wall"),
         paramtype2 = "facedir",
         tiles = {"default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png^[multiply:#a8a9ad","default_cloud.png","default_cloud.png^[multiply:#a8a9ad"},
+        is_ground_content = false,
+        groups = {cracky = 2},
+        sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("house_walls:grey_block", {
+        description = S("Grey Block"),
+        paramtype2 = "facedir",
+        tiles = {"default_cloud.png^[multiply:#a8a9ad"},
         is_ground_content = false,
         groups = {cracky = 2},
         sounds = default.node_sound_stone_defaults(),
@@ -220,6 +246,15 @@ minetest.register_node("house_walls:blue_wall", {
         sounds = default.node_sound_stone_defaults(),
 })
 
+minetest.register_node("house_walls:blue_block", {
+        description = S("Blue Block"),
+        paramtype2 = "facedir",
+        tiles = {"default_cloud.png^[multiply:#43b6f6"},
+        is_ground_content = false,
+        groups = {cracky = 2},
+        sounds = default.node_sound_stone_defaults(),
+})
+
 minetest.register_node("house_walls:red_wall", {
         description = S("Red Wall"),
         paramtype2 = "facedir",
@@ -227,6 +262,24 @@ minetest.register_node("house_walls:red_wall", {
         is_ground_content = false,
         groups = {cracky = 2},
         sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("house_walls:red_block", {
+        description = S("Red Block"),
+        paramtype2 = "facedir",
+        tiles = {"default_cloud.png^[multiply:#ca3a28"},
+        is_ground_content = false,
+        groups = {cracky = 2},
+        sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("house_walls:hedge", {
+        description = S("Hedge"),
+        paramtype2 = "facedir",
+        tiles = {"hedge.png"},
+        is_ground_content = false,
+        groups = {cracky = 2},
+        sounds = default.node_sound_dirt_defaults(),
 })
 
 
@@ -340,6 +393,23 @@ minetest.register_node("house_walls:asphalt", {
         sounds = default.node_sound_stone_defaults(),
 })
 
+if minetest.get_modpath("moreblocks") then
+    stairsplus:register_slope(
+        "house_walls",
+        "asphalt",
+        "house_walls:asphalt",
+        {
+            description = S("Asphalt"),
+            paramtype2 = "facedir",
+            place_param2 = 0,
+            tiles = {"asphalt.png"},
+            is_ground_content = false,
+            groups = {cracky = 2},
+            sounds = default.node_sound_stone_defaults(),
+        }
+    )
+end
+
 if minetest.global_exists("stairs") then
     if stairs.mod and stairs.mod == "redo" then
         stairs.register_all(
@@ -374,6 +444,22 @@ minetest.register_node("house_walls:asphalt_yellow_line", {
         sounds = default.node_sound_stone_defaults(),
 })
 
+if minetest.get_modpath("moreblocks") then
+    stairsplus:register_slope(
+        "house_walls",
+        "asphalt_yellow_line",
+        "house_walls:asphalt_yellow_line",
+        {
+            description = S("Asphalt with Yellow Line"),
+            paramtype2 = "facedir",
+            tiles = {"asphalt_yellow_line.png", "asphalt.png", "asphalt.png", "asphalt.png", "asphalt_yellow_line.png", "asphalt_yellow_line.png"},
+            is_ground_content = false,
+            groups = {cracky = 2},
+            sounds = default.node_sound_stone_defaults(),
+        }
+    )
+end
+
 if minetest.global_exists("stairs") then
     if stairs.mod and stairs.mod == "redo" then
         stairs.register_all(
@@ -407,6 +493,22 @@ minetest.register_node("house_walls:asphalt_white_line", {
         sounds = default.node_sound_stone_defaults(),
 })
 
+if minetest.get_modpath("moreblocks") then
+    stairsplus:register_slope(
+        "house_walls",
+        "asphalt_white_line.png",
+        "house_walls:asphalt_white_line",
+        {
+            description = S("Asphalt with White Line"),
+            paramtype2 = "facedir",
+            tiles = {"asphalt_white_line.png", "asphalt.png", "asphalt.png", "asphalt.png", "asphalt_white_line.png", "asphalt_white_line.png"},
+            is_ground_content = false,
+            groups = {cracky = 2},
+            sounds = default.node_sound_stone_defaults(),
+        }
+    )
+end
+
 if minetest.global_exists("stairs") then
     if stairs.mod and stairs.mod == "redo" then
         stairs.register_all(
@@ -432,39 +534,6 @@ end
 
 
 
-minetest.register_node("house_walls:asphalt_yellow_line", {
-        description = S("Asphalt with Yellow Line"),
-        paramtype2 = "facedir",
-        tiles = {"asphalt_yellow_line.png", "asphalt.png", "asphalt.png", "asphalt.png", "asphalt_yellow_line.png", "asphalt_yellow_line.png"},
-        is_ground_content = false,
-        groups = {cracky = 2},
-        sounds = default.node_sound_stone_defaults(),
-})
-
-if minetest.global_exists("stairs") then
-    if stairs.mod and stairs.mod == "redo" then
-        stairs.register_all(
-                "asphalt_yellow_line",
-                "house_walls:asphalt_yellow_line",
-                {cracky = 2},
-                {"asphalt_yellow_line.png", "asphalt.png", "asphalt.png", "asphalt.png", "asphalt_yellow_line.png", "asphalt_yellow_line.png"},
-                S("Asphalt with Yellow Line"),
-                default.node_sound_stone_defaults()
-        )
-    else
-        stairs.register_stair_and_slab(
-                "asphalt_yellow_line",
-                "house_walls:asphalt_yellow_line",
-                {cracky = 2},
-                {"asphalt_yellow_line.png", "asphalt.png", "asphalt.png", "asphalt.png", "asphalt_yellow_line.png", "asphalt_yellow_line.png"},
-                S("Asphalt with Yellow Line Stair"),
-                S("Asphalt with Yellow Line Slab"),
-                default.node_sound_stone_defaults()
-        )
-    end
-end
-
-
 minetest.register_node("house_walls:asphalt_white_dashed_line", {
         description = S("Asphalt with White Dashed Line"),
         paramtype2 = "facedir",
@@ -473,6 +542,22 @@ minetest.register_node("house_walls:asphalt_white_dashed_line", {
         groups = {cracky = 2},
         sounds = default.node_sound_stone_defaults(),
 })
+
+if minetest.get_modpath("moreblocks") then
+    stairsplus:register_slope(
+        "house_walls",
+        "asphalt_white_dashed_line.png",
+        "house_walls:asphalt_white_dashed_line",
+        {
+            description = S("Asphalt with Dashed Line"),
+            paramtype2 = "facedir",
+            tiles = {"asphalt_white_dashed_line.png", "asphalt.png", "asphalt.png", "asphalt.png", "asphalt_white_dashed_line.png", "asphalt_white_dashed_line.png"},
+            is_ground_content = false,
+            groups = {cracky = 2},
+            sounds = default.node_sound_stone_defaults(),
+        }
+    )
+end
 
 if minetest.global_exists("stairs") then
     if stairs.mod and stairs.mod == "redo" then
@@ -496,3 +581,20 @@ if minetest.global_exists("stairs") then
         )
     end
 end
+
+
+-- Signs
+
+minetest.register_node("house_walls:no_parking_sign", {
+        description = S("No Parking Sign"),
+        drawtype = "nodebox",
+        paramtype2 = "facedir",
+        tiles = {"default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png","default_cloud.png","no_parking_sign.png"},
+        is_ground_content = false,
+        groups = {cracky = 2},
+        sounds = default.node_sound_stone_defaults(),
+        node_box = {
+            type = "fixed",
+            fixed = {-0.36, -0.5, 0.49, 0.36, 0.5, 0.5}
+        }
+})

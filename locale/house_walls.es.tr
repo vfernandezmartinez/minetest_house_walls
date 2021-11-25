@@ -1,5 +1,6 @@
 # textdomain: house_walls
 Grey Tile Floor=Suelo de azulejos grises
+Terracotta Floor=Suelo de terracota
 Granite Floor=Suelo de granito
 Marble Floor=Suelo de mármol
 Wooden Floor=Suelo de madera de manzano
@@ -22,6 +23,7 @@ Yellow Wall=Pared amarilla
 Grey Wall=Pared gris
 Blue Wall=Pared azul
 Red Wall=Pared roja
+Hedge=Seto
 Grey Sidewalk=Acera gris
 Grey Sidewalk Stair=Escalera de acera gris
 Grey Sidewalk Slab=Losa de acera gris
@@ -43,3 +45,4 @@ Asphalt with White Line Slab=Losa de asfalto con línea continua
 Asphalt with White Dashed Line=Asfalto con línea discontinua
 Asphalt with White Dashed Line Stair=Escalera de asfalto con línea discontinua
 Asphalt with White Dashed Line Slab=Losa de asfalto con línea discontinua
+No Parking Sign=Vado Permanente

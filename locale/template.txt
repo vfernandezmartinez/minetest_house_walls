@@ -1,5 +1,6 @@
 # textdomain: house_walls
 Grey Tile Floor=
+Terracotta Floor=
 Granite Floor=
 Marble Floor=
 Wooden Floor=
@@ -22,6 +23,7 @@ Yellow Wall=
 Grey Wall=
 Blue Wall=
 Red Wall=
+Hedge=
 Grey Sidewalk=
 Grey Sidewalk Stair=
 Grey Sidewalk Slab=
@@ -43,3 +45,4 @@ Asphalt with White Line Slab=
 Asphalt with White Dashed Line=
 Asphalt with White Dashed Line Stair=
 Asphalt with White Dashed Line Slab=
+No Parking Sign=
