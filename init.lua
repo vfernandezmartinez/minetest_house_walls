@@ -1,6 +1,58 @@
 
 local S = minetest.get_translator("house_walls")
 
+-- Materials
+minetest.register_node("house_walls:marble", {
+        description = S("Marble"),
+        paramtype2 = "facedir",
+        place_param2 = 0,
+        tiles = {"marble.png"},
+        is_ground_content = false,
+        groups = {cracky = 2},
+        sounds = default.node_sound_stone_defaults(),
+})
+
+if minetest.get_modpath("moreblocks") then
+    stairsplus:register_stair(
+        "house_walls",
+        "marble",
+        "house_walls:marble",
+        {
+            description = S("Marble"),
+            paramtype2 = "facedir",
+            place_param2 = 0,
+            tiles = {"marble.png"},
+            is_ground_content = false,
+            groups = {cracky = 2},
+            sounds = default.node_sound_stone_defaults(),
+        }
+    )
+else
+    if minetest.global_exists("stairs") then
+        if stairs.mod and stairs.mod == "redo" then
+            stairs.register_all(
+                    "marble",
+                    "house_walls:marble",
+                    {cracky = 2},
+                    {"marble.png"},
+                    S("Marble"),
+                    default.node_sound_stone_defaults()
+            )
+        else
+            stairs.register_stair_and_slab(
+                    "marble",
+                    "house_walls:marble",
+                    {cracky = 2},
+                    {"marble.png"},
+                    S("Marble Stair"),
+                    S("Marble Slab"),
+                    default.node_sound_stone_defaults()
+            )
+        end
+    end
+end
+
+
 -- Floors
 minetest.register_node("house_walls:gray_tile_floor", {
         description = S("Grey Tile Floor"),
@@ -283,105 +335,6 @@ minetest.register_node("house_walls:hedge", {
 })
 
 
--- Sidewalks
-minetest.register_node("house_walls:grey_sidewalk", {
-        description = S("Grey Sidewalk"),
-        paramtype2 = "facedir",
-        place_param2 = 0,
-        tiles = {"grey_sidewalk.png"},
-        is_ground_content = false,
-        groups = {cracky = 2},
-        sounds = default.node_sound_stone_defaults(),
-})
-
-if minetest.global_exists("stairs") then
-    if stairs.mod and stairs.mod == "redo" then
-        stairs.register_all(
-                "grey_sidewalk",
-                "house_walls:grey_sidewalk",
-                {cracky = 2},
-                {"grey_sidewalk.png"},
-                S("Grey Sidewalk"),
-                default.node_sound_stone_defaults()
-        )
-    else
-        stairs.register_stair_and_slab(
-                "grey_sidewalk",
-                "house_walls:grey_sidewalk",
-                {cracky = 2},
-                {"grey_sidewalk.png"},
-                S("Grey Sidewalk Stair"),
-                S("Grey Sidewalk Slab"),
-                default.node_sound_stone_defaults()
-        )
-    end
-end
-
-minetest.register_node("house_walls:grey_sidewalk_curb", {
-        description = S("Grey Sidewalk with Curb"),
-        paramtype2 = "facedir",
-        tiles = {"grey_sidewalk_with_curb_up_left.png", "grey_sidewalk_with_curb_up_left.png", "grey_sidewalk.png", "curb_junction.png", "grey_sidewalk_with_curb_front_right.png", "grey_sidewalk_with_curb_front_left.png"},
-        is_ground_content = false,
-        groups = {cracky = 2},
-        sounds = default.node_sound_stone_defaults(),
-})
-
-if minetest.global_exists("stairs") then
-    if stairs.mod and stairs.mod == "redo" then
-        stairs.register_all(
-                "grey_sidewalk_edge",
-                "house_walls:grey_sidewalk_curb",
-                {cracky = 2},
-                {"grey_sidewalk_with_curb_up_left.png", "grey_sidewalk_with_curb_up_left.png", "grey_sidewalk.png", "curb_junction.png", "grey_sidewalk_with_curb_front_right.png", "grey_sidewalk_with_curb_front_left.png"},
-                S("Grey Sidewalk with Curb"),
-                default.node_sound_stone_defaults()
-        )
-    else
-        stairs.register_stair_and_slab(
-                "grey_sidewalk_edge",
-                "house_walls:grey_sidewalk_curb",
-                {cracky = 2},
-                {"grey_sidewalk_with_curb_up_left.png", "grey_sidewalk_with_curb_up_left.png", "grey_sidewalk.png", "curb_junction.png", "grey_sidewalk_with_curb_front_right.png", "grey_sidewalk_with_curb_front_left.png"},
-                S("Grey Sidewalk with Curb Stair"),
-                S("Grey Sidewalk with Curb Slab"),
-                default.node_sound_stone_defaults()
-        )
-    end
-end
-
-
-minetest.register_node("house_walls:grey_sidewalk_corner_curb", {
-        description = S("Grey Sidewalk with Corner Curb"),
-        paramtype2 = "facedir",
-        tiles = {"grey_sidewalk_with_corner_curb.png", "grey_sidewalk_with_corner_curb.png", "grey_sidewalk_with_curb_front_left.png", "curb_junction.png", "grey_sidewalk_with_curb_front_right.png", "curb.png"},
-        is_ground_content = false,
-        groups = {cracky = 2},
-        sounds = default.node_sound_stone_defaults(),
-})
-
-if minetest.global_exists("stairs") then
-    if stairs.mod and stairs.mod == "redo" then
-        stairs.register_all(
-                "grey_sidewalk_corner_curb",
-                "house_walls:grey_sidewalk_corner_curb",
-                {cracky = 2},
-                {"grey_sidewalk_with_corner_curb.png", "grey_sidewalk_with_corner_curb.png", "grey_sidewalk_with_curb_front_left.png", "curb.png", "grey_sidewalk_with_curb_front_left.png", "grey_sidewalk_with_curb_front_right.png"},
-                S("Grey Sidewalk with Corner Curb"),
-                default.node_sound_stone_defaults()
-        )
-    else
-        stairs.register_stair_and_slab(
-                "grey_sidewalk_corner_curb",
-                "house_walls:grey_sidewalk_corner_curb",
-                {cracky = 2},
-                {"grey_sidewalk_with_corner_curb.png", "grey_sidewalk_with_corner_curb.png", "grey_sidewalk_with_curb_front_left.png", "curb.png", "grey_sidewalk_with_curb_front_left.png", "grey_sidewalk_with_curb_front_right.png"},
-                S("Grey Sidewalk with Corner Curb Stair"),
-                S("Grey Sidewalk with Corner Curb Slab"),
-                default.node_sound_stone_defaults()
-        )
-    end
-end
-
 -- Street
 minetest.register_node("house_walls:asphalt", {
         description = S("Asphalt"),
@@ -598,3 +551,8 @@ minetest.register_node("house_walls:no_parking_sign", {
             fixed = {-0.36, -0.5, 0.49, 0.36, 0.5, 0.5}
         }
 })
+
+
+local modpath = minetest.get_modpath("house_walls")
+
+dofile(modpath .. "/sidewalks.lua")
